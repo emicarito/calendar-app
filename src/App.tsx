@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { hot } from "react-hot-loader/root";
-interface Props {
-    name: string
-}
+import { Calendar } from './Calendar';
+import { Appoiments } from './Appoiments';
 
-class App extends React.Component<Props> {
+class App extends React.Component {
     render() {
-        const { name } = this.props;
-        return <div>Hello {name}</div>;
+        return (
+          <div className="row">
+            <Calendar/>
+            <Appoiments/>
+          </div>
+        );
     }
 }
 
